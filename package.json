@@ -1,0 +1,26 @@
+{
+  "name": "playwrighteinvoice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:erp": "playwright test tests/E-Invoice_India_template_ERP.spec.ts --project=chromium",
+    "test:submit-all": "playwright test tests/E-Invoice_India_all_submit.spec.ts --project=chromium --workers=1",
+    "daily": "node scripts/daily-run.js",
+    "schedule:daily": "powershell -ExecutionPolicy Bypass -File ./scripts/register-daily-task.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "@types/nodemailer": "^8.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "nodemailer": "^9.0.5"
+  }
+}

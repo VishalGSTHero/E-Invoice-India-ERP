@@ -1,0 +1,89 @@
+{
+  "action": "GENERATEIRN",
+  "data": {
+    "version": "1.01",
+    "tranDtls": {
+      "taxSch": "GST",
+      "supTyp": "B2B",
+      "regRev": "N",
+      "igstOnIntra": "N"
+    },
+    "docDtls": {
+      "typ": "INV",
+      "no": "OA02232003403800",
+      "dt": "11/08/2026"
+    },
+    "sellerDtls": {
+      "gstin": "05AALFP1139Q003",
+      "lglNm": "Panchshil Techpark Private Limited",
+      "trdNm": "Panchshil Techpark Private Limited",
+      "addr1": "Pune",
+      "addr2": "Pune",
+      "loc": "Pune",
+      "pin": "263001",
+      "stcd": "05",
+      "ph": "9100000000",
+      "em": "test@einv.com"
+    },
+    "buyerDtls": {
+      "gstin": "29AAAAP0267H1ZK",
+      "lglNm": "MILLENNIUM ENGINEERS AND",
+      "trdNm": "MILLENNIUM ENGINEERS AND",
+      "addr1": "Wagholi",
+      "addr2": "Kharadi",
+      "loc": "PUNE",
+      "pin": "590001",
+      "stcd": "29",
+      "pos": "29",
+      "ph": "02066854600",
+      "em": "test@einv.com"
+    },
+    "valDtls": {
+      "assVal": 1000000000,
+      "cgstVal": 0,
+      "sgstVal": 0,
+      "igstVal": 180000000,
+      "cessVal": 0,
+      "othChrg": 1.42,
+      "totInvVal": 1180000001.42,
+      "rndOffAmt": 0,
+      "totInvValFc": 0
+    },
+    "itemList": [
+      {
+        "slNo": "1",
+        "prdDesc": "STEEL 10 mm Fe500 (IS 1786)",
+        "isServc": "N",
+        "hsnCd": "100200",
+        "barCde": "101008020012",
+        "qty": 1,
+        "freeQty": 0,
+        "unit": "TON",
+        "unitPrice": 1000000000,
+        "totAmt": 1000000000,
+        "discount": 0,
+        "preTaxVal": 0,
+        "assAmt": 1000000000,
+        "gstRt": 18,
+        "cgstAmt": 0,
+        "sgstAmt": 0,
+        "igstAmt": 180000000,
+        "cessAmot": 0,
+        "othChrg": 0,
+        "totItemVal": 1180000000,
+        "orgCntry": "IN",
+        "prdSlNo": "101008020012"
+      }
+    ],
+    "EwbDtls": {
+      "transId": "27AAACO2867J1Z6",
+      "transName": "Sai Transporter",
+      "VehType": "R",
+      "TransDocNo": "123",
+      "TransDocDt": "19/12/2023",
+      "VehNo": "MH11AK2022",
+      "transMode": "1",
+      "distance": "0"
+    }
+  }
+}
