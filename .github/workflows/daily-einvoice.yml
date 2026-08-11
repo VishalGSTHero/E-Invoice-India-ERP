@@ -1,0 +1,61 @@
+name: E-Invoice Daily Automation
+
+on:
+  schedule:
+    # 10:00 AM IST = 04:30 UTC
+    - cron: "30 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  einvoice-submit:
+    name: Run submit APIs + email report
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run daily suite (tests + email)
+        env:
+          CI: true
+          EINV_BASE_URL: ${{ secrets.EINV_BASE_URL }}
+          EINV_GSTIN: ${{ secrets.EINV_GSTIN }}
+          EINV_CONNECTOR_AUTH: ${{ secrets.EINV_CONNECTOR_AUTH }}
+          EINV_BASIC_AUTH: ${{ secrets.EINV_BASIC_AUTH }}
+          EINV_CLIENT_ID: ${{ secrets.EINV_CLIENT_ID }}
+          EINV_CLIENT_SECRET: ${{ secrets.EINV_CLIENT_SECRET }}
+          EINV_OAUTH_USER: ${{ secrets.EINV_OAUTH_USER }}
+          EINV_OAUTH_PASS: ${{ secrets.EINV_OAUTH_PASS }}
+          EINV_AUTH_USER: ${{ secrets.EINV_AUTH_USER }}
+          EINV_AUTH_PASS: ${{ secrets.EINV_AUTH_PASS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: npm run daily
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+            logs/
+          retention-days: 14
