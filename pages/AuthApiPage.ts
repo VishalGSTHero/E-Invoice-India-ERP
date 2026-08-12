@@ -34,7 +34,15 @@ export class AuthApiPage {
       }
     );
 
-    const body = await response.json();
+    const raw = await response.text();
+    let body: Record<string, any> = {};
+    try {
+      body = raw ? JSON.parse(raw) : {};
+    } catch {
+      throw new Error(
+        `OAuth failed: HTTP ${response.status()} non-JSON response from ${eInvoiceConfig.baseUrl}/auth-server/oauth/token — ${raw.slice(0, 200)}`
+      );
+    }
     console.log('1) OAuth-Token status:', response.status());
     expect(response.ok(), `OAuth failed: ${JSON.stringify(body)}`).toBeTruthy();
     expect(body.access_token, 'OAuth access_token missing').toBeTruthy();

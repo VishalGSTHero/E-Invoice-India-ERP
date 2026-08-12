@@ -8,7 +8,7 @@ on:
 
 jobs:
   einvoice-submit:
-    name: Run submit APIs + email report
+    name: Run submit APIs
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -28,7 +28,7 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run daily suite (tests + email)
+      - name: Run submit suite
         env:
           CI: true
           EINV_BASE_URL: ${{ secrets.EINV_BASE_URL }}
@@ -41,13 +41,7 @@ jobs:
           EINV_OAUTH_PASS: ${{ secrets.EINV_OAUTH_PASS }}
           EINV_AUTH_USER: ${{ secrets.EINV_AUTH_USER }}
           EINV_AUTH_PASS: ${{ secrets.EINV_AUTH_PASS }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS }}
-          MAIL_FROM: ${{ secrets.MAIL_FROM }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
-        run: npm run daily
+        run: npm run test:submit-all
 
       - name: Upload Playwright report
         if: always()
