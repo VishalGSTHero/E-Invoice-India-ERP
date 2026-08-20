@@ -1,0 +1,17 @@
+{
+  "name": "gsthero-einvoice-api",
+  "version": "1.0.0",
+  "description": "GST Hero E-Invoice India Generate IRN API tests",
+  "scripts": {
+    "test": "playwright test --project=chromium --workers=1"
+  },
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

@@ -1,0 +1,257 @@
+[
+  {
+    "name": "Bill from dispatch from without eway bill",
+    "file": "bill_from_dispatch_from_without_eway_bill.json",
+    "key": "bill_from_dispatch_from_without_eway_bill",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Bill from dispatch from with multilline item",
+    "file": "bill_from_dispatch_from_with_multilline_item.json",
+    "key": "bill_from_dispatch_from_with_multilline_item",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 2,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Bill from dispatch from with one line address",
+    "file": "bill_from_dispatch_from_with_one_line_address.json",
+    "key": "bill_from_dispatch_from_with_one_line_address",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 2,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "bill to ship to",
+    "file": "bill_to_ship_to.json",
+    "key": "bill_to_ship_to",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Regular with eway bill",
+    "file": "regular_with_eway_bill.json",
+    "key": "regular_with_eway_bill",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Regular without eway bill",
+    "file": "regular_without_eway_bill.json",
+    "key": "regular_without_eway_bill",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Regular multiline item",
+    "file": "regular_multiline_item.json",
+    "key": "regular_multiline_item",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 2,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "29AAAAP0267H1ZK"
+    }
+  },
+  {
+    "name": "Combination 2 and 3 with eway bill",
+    "file": "combination_2_and_3_with_eway_bill.json",
+    "key": "combination_2_and_3_with_eway_bill",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Combination 2 and 3 without eway bill",
+    "file": "combination_2_and_3_without_eway_bill.json",
+    "key": "combination_2_and_3_without_eway_bill",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Combination 2 and 3 multiline item",
+    "file": "combination_2_and_3_multiline_item.json",
+    "key": "combination_2_and_3_multiline_item",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Combination 2 and 3 one line address",
+    "file": "combination_2_and_3_one_line_address.json",
+    "key": "combination_2_and_3_one_line_address",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Export",
+    "file": "export.json",
+    "key": "export",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "EXPWP",
+      "sellerPin": "263001",
+      "buyerGstin": "URP"
+    }
+  },
+  {
+    "name": "Generate only E-invoice CRN",
+    "file": "generate_only_e_invoice_crn.json",
+    "key": "generate_only_e_invoice_crn",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "CRN",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Generate only E-invoice DBN",
+    "file": "generate_only_e_invoice_dbn.json",
+    "key": "generate_only_e_invoice_dbn",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "DBN",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Generate only E-invoice multiline item",
+    "file": "generate_only_e_invoice_multiline_item.json",
+    "key": "generate_only_e_invoice_multiline_item",
+    "fingerprint": {
+      "hasDisp": true,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 2,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Generate only E-invoice-Regular",
+    "file": "generate_only_e_invoice_regular.json",
+    "key": "generate_only_e_invoice_regular",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": false,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  },
+  {
+    "name": "Generate only E-invoice-Bill to ship to",
+    "file": "generate_only_e_invoice_bill_to_ship_to.json",
+    "key": "generate_only_e_invoice_bill_to_ship_to",
+    "fingerprint": {
+      "hasDisp": false,
+      "hasShip": true,
+      "hasEwb": false,
+      "itemCnt": 1,
+      "docTyp": "INV",
+      "supTyp": "B2B",
+      "sellerPin": "263001",
+      "buyerGstin": "27AABCM8432E1ZL"
+    }
+  }
+]

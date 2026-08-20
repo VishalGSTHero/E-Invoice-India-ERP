@@ -1,0 +1,87 @@
+{
+  "action": "GENERATEIRN",
+  "data": {
+    "version": "1.01",
+    "tranDtls": {
+      "taxSch": "GST",
+      "supTyp": "B2B",
+      "regRev": "N",
+      "igstOnIntra": "N"
+    },
+    "docDtls": {
+      "typ": "INV",
+      "no": "OA02232003",
+      "dt": "19/12/2023"
+    },
+    "sellerDtls": {
+      "gstin": "05AALFP1139Q003",
+      "lglNm": "Panchshil Techpark Private Limited",
+      "trdNm": "Panchshil Techpark Private Limited",
+      "addr1": "Pune",
+      "addr2": "Pune",
+      "loc": "Pune",
+      "pin": "263001",
+      "stcd": "05",
+      "ph": "9100000000",
+      "em": "test@einv.com"
+    },
+    "buyerDtls": {
+      "gstin": "29AAAAP0267H1ZK",
+      "lglNm": "MILLENNIUM ENGINEERS AND",
+      "trdNm": "MILLENNIUM ENGINEERS AND",
+      "addr1": "Wagholi",
+      "addr2": "Kharadi",
+      "loc": "PUNE",
+      "pin": "590001",
+      "stcd": "29",
+      "pos": "29",
+      "ph": "02066854600",
+      "em": "test@einv.com"
+    },
+    "dispDtls": {
+      "nm": "Panchshil Techpark Private Limited",
+      "addr1": "Wagholi",
+      "addr2": "Kharadi",
+      "loc": "Pune",
+      "pin": "263001",
+      "stcd": "05"
+    },
+    "valDtls": {
+      "assVal": 100000,
+      "cgstVal": 0,
+      "sgstVal": 0,
+      "igstVal": 18000,
+      "cessVal": 0,
+      "othChrg": 1.42,
+      "totInvVal": 118001.42,
+      "rndOffAmt": 0,
+      "totInvValFc": 0
+    },
+    "itemList": [
+      {
+        "slNo": "1",
+        "prdDesc": "STEEL 10 mm Fe500 (IS 1786)",
+        "isServc": "N",
+        "hsnCd": "100200",
+        "barCde": "101008020012",
+        "qty": 1,
+        "freeQty": 0,
+        "unit": "TON",
+        "unitPrice": 100000,
+        "totAmt": 100000,
+        "discount": 0,
+        "preTaxVal": 0,
+        "assAmt": 100000,
+        "gstRt": 18,
+        "cgstAmt": 0,
+        "sgstAmt": 0,
+        "igstAmt": 18000,
+        "cessAmot": 0,
+        "othChrg": 0,
+        "totItemVal": 118000,
+        "orgCntry": "IN",
+        "prdSlNo": "101008020012"
+      }
+    ]
+  }
+}
