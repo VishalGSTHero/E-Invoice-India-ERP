@@ -3,7 +3,7 @@ function required(name: string, fallback = ''): string {
 }
 
 export const eInvoiceConfig = {
-  baseUrl: required('EINV_BASE_URL', 'https://dev.gsthero.com'),
+  baseUrl: required('EINV_BASE_URL', 'https://qa.gsthero.com'),
   gstin: required('EINV_GSTIN', '05AALFP1139Q003'),
   connectorAuthToken: required(
     'EINV_CONNECTOR_AUTH',

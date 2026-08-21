@@ -56,14 +56,20 @@ export class EInvoiceTemplatePage {
     await excelRadio.evaluate((el: HTMLInputElement) => {
       el.click();
     });
-    await this.page.locator('#einvtemplateList').waitFor({ state: 'visible', timeout: 15000 });
+    const templateSelect = this.page.locator('#einvtemplateList');
+    await templateSelect.waitFor({ state: 'visible', timeout: 15000 });
 
-    await this.page.locator('#einvtemplateList').selectOption(connectorCode);
-    await expect(this.page.locator('#einvtemplateList')).toHaveValue(connectorCode);
+    const labelByCode: Record<string, string> = {
+      '102': 'GST Hero Excel Template Version 1.0',
+      '301': 'GST Hero Excel Template Version 2.0',
+    };
+    const label = labelByCode[String(connectorCode)] ?? String(connectorCode);
+    await templateSelect.selectOption({ label });
+    await expect(templateSelect.locator('option:checked')).toHaveText(label);
 
     await Promise.all([
       this.page.waitForURL(/e-invoice-excel-mapping-step2/, { timeout: 120000 }),
-      this.page.locator('#processAndNextButton').click(),
+      this.page.getByRole('button', { name: /^Process & Next$/i }).click(),
     ]);
 
     const processStep2 = this.page
