@@ -10,6 +10,8 @@ export const eInvoiceConfig = {
   uiLoginUrl: required('EINV_UI_LOGIN_URL', 'https://dev.gsthero.com/GspModel/login'),
   uiEmail: required('EINV_UI_EMAIL', required('EINV_OAUTH_USER')),
   uiPassword: required('EINV_UI_PASSWORD', required('EINV_OAUTH_PASS')),
+  authUsername: required('EINV_AUTH_USER'),
+  authPassword: required('EINV_AUTH_PASS'),
   templateConnectorCode: required('EINV_TEMPLATE_CONNECTOR', '102'),
   templateFilePath: required(
     'EINV_TEMPLATE_FILE',

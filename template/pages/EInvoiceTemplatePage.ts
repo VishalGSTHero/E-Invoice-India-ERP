@@ -256,8 +256,8 @@ export class EInvoiceTemplatePage {
   }
 
   /**
-   * "Authentication E-Invoice User" modal — use same NIC credentials as API
-   * (EINV_AUTH_USER / EINV_AUTH_PASS → perennialsys_UK / Pere@123)
+   * "Authentication E-Invoice User" modal — NIC credentials from
+   * EINV_AUTH_USER / EINV_AUTH_PASS in .env
    */
   private async fillEInvoiceAuthIfNeeded(timeoutMs = 20000) {
     const modal = this.page
