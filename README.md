@@ -54,7 +54,12 @@ Push to `main` or **Actions → E-Invoice Playwright → Run workflow**. There i
 | ERP API (QA) | `api/` | `https://qa.gsthero.com` |
 | Template UI (dev) | `template/` | `https://dev.gsthero.com` |
 
-Set the same names as repository **Secrets** (`EINV_GSTIN`, `EINV_BASIC_AUTH`, `EINV_CLIENT_SECRET`, `EINV_OAUTH_USER`, `EINV_OAUTH_PASS`, `EINV_AUTH_USER`, `EINV_AUTH_PASS`, `EINV_UI_EMAIL`, `EINV_UI_PASSWORD`, `EINV_CONNECTOR_AUTH`). Reports are uploaded as artifacts.
+Set repository **Secrets** (never commit these):
+
+- Tests: `EINV_GSTIN`, `EINV_CONNECTOR_AUTH`, `EINV_BASIC_AUTH`, `EINV_CLIENT_ID`, `EINV_CLIENT_SECRET`, `EINV_OAUTH_USER`, `EINV_OAUTH_PASS`, `EINV_AUTH_USER`, `EINV_AUTH_PASS`, `EINV_UI_EMAIL`, `EINV_UI_PASSWORD`
+- Email: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`, `MAIL_TO`
+
+After both jobs finish, Actions emails `MAIL_TO`. Reports are also uploaded as artifacts.
 
 ## Environment variables
 

@@ -107,3 +107,43 @@ jobs:
             template/playwright-report/
             template/test-results/
           retention-days: 14
+
+  email:
+    name: Email report
+    runs-on: ubuntu-latest
+    needs: [api, template]
+    if: always()
+    steps:
+      - name: Write email body
+        env:
+          API_RESULT: ${{ needs.api.result }}
+          TEMPLATE_RESULT: ${{ needs.template.result }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SHA: ${{ github.sha }}
+        run: |
+          cat > "$GITHUB_WORKSPACE/report-email.html" << EOF
+          <html><body style="font-family:Segoe UI,Arial,sans-serif">
+          <h2>E-Invoice India — GitHub Actions Report</h2>
+          <p><b>Commit:</b> ${SHA:0:7}</p>
+          <table border="1" cellpadding="6" cellspacing="0">
+          <tr><th>Job</th><th>Result</th></tr>
+          <tr><td>ERP API (QA)</td><td>${API_RESULT}</td></tr>
+          <tr><td>Template UI (dev)</td><td>${TEMPLATE_RESULT}</td></tr>
+          </table>
+          <p><a href="${RUN_URL}">Open full report and artifacts on GitHub</a></p>
+          </body></html>
+          EOF
+
+      - name: Send report email
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASS }}
+          subject: "[E-Invoice] API ${{ needs.api.result }} / Template ${{ needs.template.result }}"
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
+          html_body: file://${{ github.workspace }}/report-email.html
+          secure: false
+          ignore_cert: true
