@@ -2,7 +2,9 @@
 
 Playwright suites for GST Hero E-Invoice (India). API Generate IRN tests and Excel Template UI tests live in **separate packages** so they install and run independently.
 
-Repo: https://bitbucket.org/perennialsys/gsthero-automation-playwright
+Repos:
+- GitHub: https://github.com/VishalGSTHero/E-Invoice-India-ERP
+- Bitbucket: https://bitbucket.org/perennialsys/gsthero-automation-playwright
 
 ```
 api/          Generate IRN HTTP tests  → https://qa.gsthero.com
@@ -12,8 +14,8 @@ template/     Excel map → upload → submit → PDF  → https://dev.gsthero.c
 ## Setup
 
 ```bash
-git clone https://bitbucket.org/perennialsys/gsthero-automation-playwright.git
-cd gsthero-automation-playwright
+git clone https://github.com/VishalGSTHero/E-Invoice-India-ERP.git
+cd E-Invoice-India-ERP
 ```
 
 ### API suite
