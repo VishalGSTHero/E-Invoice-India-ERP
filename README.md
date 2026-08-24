@@ -37,11 +37,24 @@ npm install
 npx playwright install chromium
 copy .env.example .env   # Windows
 # fill UI credentials in .env
-# place the Excel file locally (not committed); set EINV_TEMPLATE_FILE if needed
+# Excel fixture is in testdata/templates/; set EINV_TEMPLATE_FILE only to override
 npm test
 ```
 
 Never commit `.env`. Each folder has its own `.env`.
+
+## GitHub Actions
+
+Repo: [VishalGSTHero/E-Invoice-India-ERP](https://github.com/VishalGSTHero/E-Invoice-India-ERP/actions)
+
+Push to `main` or **Actions → E-Invoice Playwright → Run workflow**. There is no daily schedule.
+
+| Job | Suite | Environment |
+|---|---|---|
+| ERP API (QA) | `api/` | `https://qa.gsthero.com` |
+| Template UI (dev) | `template/` | `https://dev.gsthero.com` |
+
+Set the same names as repository **Secrets** (`EINV_GSTIN`, `EINV_BASIC_AUTH`, `EINV_CLIENT_SECRET`, `EINV_OAUTH_USER`, `EINV_OAUTH_PASS`, `EINV_AUTH_USER`, `EINV_AUTH_PASS`, `EINV_UI_EMAIL`, `EINV_UI_PASSWORD`, `EINV_CONNECTOR_AUTH`). Reports are uploaded as artifacts.
 
 ## Environment variables
 
@@ -72,4 +85,4 @@ Never commit `.env`. Each folder has its own `.env`.
 | `EINV_TEMPLATE_CONNECTOR` | `102` (Excel Version 1.0) |
 | `EINV_TEMPLATE_FILE` | path to Excel (optional) |
 
-If the Excel file is missing, Template tests skip.
+If the Excel file is missing, Template tests skip. The Version 1.0 fixture is committed under `template/testdata/templates/`.

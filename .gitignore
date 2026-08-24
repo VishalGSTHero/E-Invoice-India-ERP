@@ -58,3 +58,4 @@ playwright/.auth/
 logs/
 .cursor/
 *.xlsx
+!template/testdata/templates/TestFile-27_INVALID_20230904165850.xlsx
